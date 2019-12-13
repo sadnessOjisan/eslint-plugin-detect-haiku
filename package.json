@@ -4,5 +4,11 @@
   "main": "src/main.js",
   "repository": "https://github.com/sadnessOjisan/eslint-plugin-detect-haiku.git",
   "author": "sadnessOjisan <sadness.ojisan@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "eslint --rulesdir src/ benchmark/sample.js"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2"
+  }
 }
