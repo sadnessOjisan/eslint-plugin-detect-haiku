@@ -10,5 +10,9 @@
   },
   "devDependencies": {
     "eslint": "^6.7.2"
+  },
+  "dependencies": {
+    "js-word-count-for-haiku": "^1.0.2",
+    "js-word-kana": "^0.0.6"
   }
 }

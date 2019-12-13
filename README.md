@@ -5,3 +5,7 @@
 ```zsh
 $ eslint --rulesdir src/ benchmark/sample.js
 ```
+
+```
+$ yarn run start
+```
