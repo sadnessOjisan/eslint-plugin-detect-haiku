@@ -92,7 +92,7 @@ const setWord = (word, kana, position) => {
 
 const resultHike = HIKE_OBJECT => {
   const { first, second, third } = HIKE_OBJECT;
-  console.info(`${first.word} ${second.word} ${third.word}`);
+  return `${first.word} ${second.word} ${third.word}`;
 };
 
 module.exports = context => {
@@ -156,8 +156,11 @@ module.exports = context => {
             return;
           }
         }
-        // 575が達成された時の処理
-        resultHike(HIKE_OBJECT);
+
+        context.report({
+          node: node,
+          message: `俳句を検知しました. ${resultHike(HIKE_OBJECT)}`
+        }); // 警告
         resetHikeObj();
       }
     }
