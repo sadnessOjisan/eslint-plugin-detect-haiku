@@ -6,7 +6,7 @@
   "author": "sadnessOjisan <sadness.ojisan@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "eslint --rulesdir src/ benchmark/sample.js"
+    "start": "eslint ./benchmark --rulesdir ./src/"
   },
   "devDependencies": {
     "eslint": "^6.7.2"
