@@ -6,10 +6,13 @@
   "author": "sadnessOjisan <sadness.ojisan@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "eslint ./benchmark --rulesdir ./src/"
+    "start": "eslint ./benchmark --rulesdir ./src/",
+    "build": "rollup -c"
   },
   "devDependencies": {
-    "eslint": "^6.7.2"
+    "eslint": "^6.7.2",
+    "rollup": "^1.27.12",
+    "rollup-plugin-terser": "^5.1.3"
   },
   "dependencies": {
     "js-word-count-for-haiku": "^1.0.2",
