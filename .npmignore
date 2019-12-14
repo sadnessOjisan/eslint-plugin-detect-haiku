@@ -1,4 +1,5 @@
-/example/**
+/benchmark/**
+/.github/**
 /src/**
 /rollup.config.js
 /dist/.gitkeep
