@@ -2,6 +2,7 @@
 
 const countWord = require("js-word-count-for-haiku").default;
 const data = require("js-word-kana").default;
+const hike = require("haiku-core");
 
 const HIKE_OBJECT = {
   first: {
@@ -98,71 +99,7 @@ const resultHike = HIKE_OBJECT => {
 module.exports = context => {
   return {
     Identifier: node => {
-      const { name } = node;
-      const kana = data[name];
-      if (!kana) {
-        // 単語辞書から該当する言葉を見つけられなかったとき
-        resetHikeObj();
-      } else {
-        if (countHikeWord(HIKE_OBJECT.first.kana) !== 5) {
-          // 1句目が5文字じゃないときは1句目を操作
-          if (
-            countHikeWord(HIKE_OBJECT.first.kana) + countHikeWord(kana) ===
-            5
-          ) {
-            // すでに入力された1句目といま入力されたものの合計が5になったかどうかをチェック
-            setWord(name, kana, "first");
-            return;
-          } else {
-            setWord(name, kana, "first");
-            if (countHikeWord(HIKE_OBJECT.first.kana) > 5) {
-              resetHikeObj();
-            }
-            return;
-          }
-        }
-        if (countHikeWord(HIKE_OBJECT.second.kana) !== 7) {
-          //    2句目が7文字じゃないときは2句目を操作
-          if (
-            countHikeWord(HIKE_OBJECT.second.kana) + countHikeWord(kana) ===
-            7
-          ) {
-            // すでに入力された1句目といま入力されたものの合計が5になったかどうかをチェック
-            setWord(name, kana, "second");
-            return;
-          } else {
-            setWord(name, kana, "second");
-            if (countHikeWord(HIKE_OBJECT.second.kana) > 7) {
-              resetHikeObj();
-            }
-            return;
-          }
-        }
-
-        if (countHikeWord(HIKE_OBJECT.third.kana) !== 5) {
-          //   3句目が5文字じゃないときは3句目を操作
-          if (
-            countHikeWord(HIKE_OBJECT.third.kana) + countHikeWord(kana) ===
-            5
-          ) {
-            // すでに入力された1句目といま入力されたものの合計が5になったかどうかをチェック
-            //   注意: このブロックはreturnしない
-            setWord(name, kana, "third");
-          } else {
-            setWord(name, kana, "third");
-            if (countHikeWord(HIKE_OBJECT.third.kana) > 5) {
-              resetHikeObj();
-            }
-            return;
-          }
-        }
-
-        context.report({
-          node: node,
-          message: `俳句を検知しました. ${resultHike(HIKE_OBJECT)}`
-        }); // 警告
-        resetHikeObj();
-      }
+      hike(node);
     }
   };
 };

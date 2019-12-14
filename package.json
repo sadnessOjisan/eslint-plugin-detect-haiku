@@ -6,7 +6,7 @@
   "author": "sadnessOjisan <sadness.ojisan@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "eslint ./benchmark",
+    "start": "eslint ./benchmark --rulesdir src/rules",
     "build": "rollup -c"
   },
   "devDependencies": {
@@ -14,6 +14,7 @@
     "rollup-plugin-terser": "^5.1.3"
   },
   "dependencies": {
+    "haiku-core": "^0.0.1",
     "js-word-count-for-haiku": "^1.0.2",
     "js-word-kana": "^0.0.6",
     "rollup-plugin-commonjs": "^10.1.0"
