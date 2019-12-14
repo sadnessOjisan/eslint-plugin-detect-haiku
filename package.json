@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-detect-haiku",
   "version": "0.0.1",
-  "main": "src/main.js",
+  "main": "dist/bundle.js",
   "repository": "https://github.com/sadnessOjisan/eslint-plugin-detect-haiku.git",
   "author": "sadnessOjisan <sadness.ojisan@gmail.com>",
   "license": "MIT",
