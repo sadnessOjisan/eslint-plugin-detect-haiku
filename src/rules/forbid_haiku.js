@@ -99,7 +99,10 @@ const resultHike = HIKE_OBJECT => {
 module.exports = context => {
   return {
     Identifier: node => {
-      hike(node);
+      const data = hike(node);
+      if (data) {
+        context.report({ node, message: `俳句を検知しました. => ${data}` });
+      }
     }
   };
 };
