@@ -2,7 +2,7 @@
 
 俳句を禁止するプラグイン
 
-これは [クソアプリ Advent Calendar 2019](https://qiita.com/advent-calendar/2019/kuso-app)の 19 日目の記事である、[タイトル未定](https://qiita.com/sadnessOjisan/98619eaaef1da8d6545a) のために開発されたものです。
+これは [クソアプリ Advent Calendar 2019](https://qiita.com/advent-calendar/2019/kuso-app)の 19 日目の記事である、[ビルド時に俳句を読めるプラグイン](https://qiita.com/sadnessOjisan/98619eaaef1da8d6545a) のために開発されたものです。
 
 ## 導入
 
