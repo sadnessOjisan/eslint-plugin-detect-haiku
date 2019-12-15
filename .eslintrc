@@ -3,7 +3,7 @@
     "node": true
   },
   "rules": {
-    "main": 2
+    "forbid_haiku": 2
   },
   "parserOptions": {
     "ecmaVersion": 2015
